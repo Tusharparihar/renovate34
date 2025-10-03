@@ -1,0 +1,27 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["terraform"],
+  "terraform": {
+    "enabled": true
+  },
+  "automerge": false,
+  "automergeType": "pr",
+  "branchConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^azurerm$"],
+      "groupName": "Terraform azurerm provider updates",
+      "rangeStrategy": "bump",  
+      "automerge": false
+    },
+    {
+      "matchPackagePatterns": ["^random$"],
+      "groupName": "Terraform random provider updates",
+      "rangeStrategy": "bump",  
+      "automerge": false
+    }
+  ]
+}
