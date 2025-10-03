@@ -14,14 +14,14 @@
     {
       "matchPackagePatterns": ["^azurerm$"],
       "groupName": "Terraform azurerm provider updates",
-      "rangeStrategy": "bump",  
-      "automerge": false
+      "rangeStrategy": "pin",  
+      "updateTypes": ["patch"]
     },
     {
       "matchPackagePatterns": ["^random$"],
       "groupName": "Terraform random provider updates",
-      "rangeStrategy": "bump",  
-      "automerge": false
+      "rangeStrategy": "pin",
+      "updateTypes": ["patch"]
     }
   ]
 }
