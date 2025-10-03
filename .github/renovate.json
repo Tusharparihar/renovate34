@@ -7,21 +7,19 @@
   "automerge": false,
   "automergeType": "pr",
   "branchConcurrentLimit": 5,
-  "prHourlyLimit": 2,
+  "prHourlyLimit": 10,
   "prConcurrentLimit": 5,
   "dependencyDashboard": true,
   "packageRules": [
     {
       "matchPackagePatterns": ["^azurerm$"],
       "groupName": "Terraform azurerm provider updates",
-      "rangeStrategy": "pin",  
-      "updateTypes": ["patch"]
+      "rangeStrategy": "pin"
     },
     {
       "matchPackagePatterns": ["^random$"],
       "groupName": "Terraform random provider updates",
-      "rangeStrategy": "pin",
-      "updateTypes": ["patch"]
+      "rangeStrategy": "pin"
     }
   ]
 }
